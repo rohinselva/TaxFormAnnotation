@@ -1,0 +1,62 @@
+{
+  "taxpayer": {
+    "firstNameAndInitial": "ROHIN",
+    "lastName": "SELVA",
+    "ssn": "123-45-6789",
+    "address": {
+      "street": "100 CONGRESS AVE",
+      "city": "AUSTIN",
+      "state": "TX",
+      "zipCode": "78701"
+    },
+    "occupation": "SOFTWARE ARCHITECT",
+    "phone": "(512) 555-0199",
+    "identityProtectionPin": "987654",
+    "signatureDate": "04/15/2026"
+  },
+  "filingStatus": {
+    "isSingle": true,
+    "isMarriedFilingJointly": false
+  },
+  "digitalAssets": {
+    "answeredNo": true
+  },
+  "dependents": [
+    {
+      "firstName": "ALEX",
+      "lastName": "DOE",
+      "ssn": "987-65-4321",
+      "relationship": "SON"
+    },
+    {
+      "firstName": "SARAH",
+      "lastName": "DOE",
+      "ssn": "987-65-4322",
+      "relationship": "DAUGHTER"
+    },
+    {
+      "firstName": "MICHAEL",
+      "lastName": "DOE",
+      "ssn": "987-65-4323",
+      "relationship": "SON"
+    }
+  ],
+  "income": {
+    "w2Wages": 115000.50,
+    "householdEmployeeWages": 4320.75,
+    "totalEarnedIncome1z": 115000.50,
+    "totalIncome": 115000.50
+  },
+  "tax": {
+    "adjustedGrossIncome": 115000.50,
+    "taxableIncome": 95250.50,
+    "totalTax": 16420.00
+  },
+  "payments": {
+    "totalWithholding": 19500.00,
+    "formerSpouseSsn": "999-88-7766"
+  },
+  "refund": {
+    "overpaidAmount": 3080.00
+  }
+}
