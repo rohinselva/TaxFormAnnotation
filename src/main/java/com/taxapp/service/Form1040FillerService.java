@@ -27,6 +27,12 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.taxapp.validation.SpecificationValidator;
+import com.taxapp.validation.TaxDataValidator;
+import com.taxapp.validation.ValidationException;
+import com.taxapp.validation.ValidationPolicy;
+import com.taxapp.validation.ValidationResult;
+
 /**
  * Service responsible for evaluating JSONPath queries from the
  * FormSpecification against
@@ -39,11 +45,42 @@ public class Form1040FillerService {
 
     private final ObjectMapper objectMapper;
     private final Configuration jsonPathConfig;
+    private final TaxDataValidator taxDataValidator;
+    private final SpecificationValidator specificationValidator;
+    private ValidationPolicy validationPolicy = ValidationPolicy.LENIENT;
 
     public Form1040FillerService() {
         this.objectMapper = new ObjectMapper();
         this.jsonPathConfig = Configuration.defaultConfiguration()
                 .addOptions(Option.DEFAULT_PATH_LEAF_TO_NULL, Option.SUPPRESS_EXCEPTIONS);
+        this.taxDataValidator = new TaxDataValidator();
+        this.specificationValidator = new SpecificationValidator();
+    }
+
+    public ValidationPolicy getValidationPolicy() {
+        return validationPolicy;
+    }
+
+    public void setValidationPolicy(ValidationPolicy validationPolicy) {
+        this.validationPolicy = validationPolicy != null ? validationPolicy : ValidationPolicy.LENIENT;
+    }
+
+    /**
+     * Executes pre-flight validation on both the specification and taxpayer payload.
+     *
+     * @param spec      Form specification
+     * @param payerJson Dynamic taxpayer JSON payload
+     * @return ValidationResult aggregating all discovered issues
+     */
+    public ValidationResult validate(FormSpecification spec, String payerJson) {
+        ValidationResult result = new ValidationResult();
+        if (spec != null) {
+            result.merge(specificationValidator.validate(spec));
+        }
+        if (payerJson != null) {
+            result.merge(taxDataValidator.validate(payerJson));
+        }
+        return result;
     }
 
     /**
@@ -73,6 +110,14 @@ public class Form1040FillerService {
             FormSpecification spec,
             String payerJson,
             File outputFile) throws IOException {
+
+        // Pre-flight validation according to configured policy
+        if (validationPolicy != ValidationPolicy.SKIP) {
+            ValidationResult validationResult = validate(spec, payerJson);
+            if (validationPolicy == ValidationPolicy.STRICT && validationResult.hasErrors()) {
+                throw new ValidationException("PDF generation aborted due to pre-flight validation errors", validationResult);
+            }
+        }
 
         DocumentContext documentContext = JsonPath.using(jsonPathConfig).parse(payerJson);
 
