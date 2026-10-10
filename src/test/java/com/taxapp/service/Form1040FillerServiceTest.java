@@ -20,6 +20,7 @@ import java.io.File;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -200,10 +201,38 @@ class Form1040FillerServiceTest {
             int maskX = (int) (100 * scale1);
             int maskY = (int) ((792 - 460) * scale1);
             int maskW = (int) (390 * scale1);
-            int maskH = (int) (25 * scale1);
-            java.awt.image.BufferedImage maskCrop = bimPage2.getSubimage(maskX, maskY, maskW, maskH);
+            int maskCropH = (int) (25 * scale1);
+            java.awt.image.BufferedImage maskCrop = bimPage2.getSubimage(maskX, maskY, maskW, maskCropH);
             javax.imageio.ImageIO.write(maskCrop, "PNG", new File("C:/Users/rohin/.gemini/antigravity-ide/brain/99f0db0d-cb2e-4cd0-abe1-7f9c23f05038/masked_ssn_crop.png"));
         }
+    }
+
+    @Test
+    @DisplayName("Should abort PDF generation in STRICT mode when validation detects errors")
+    void testValidationPolicyEnforcement(@TempDir Path tempDir) {
+        fillerService.setValidationPolicy(com.taxapp.validation.ValidationPolicy.STRICT);
+
+        InputStream blankPdfStream = getClass().getResourceAsStream("/f1040_blank.pdf");
+        assertNotNull(blankPdfStream);
+
+        // Invalid specification with negative coordinate
+        FormSpecification invalidSpec = new FormSpecification(
+                "IRS-1040", 2025, 2, "POINTS", new com.taxapp.model.PageDimensions(612.0, 792.0),
+                List.of(new FieldAnnotation("bad_x", "1", 1, new Position(-10, 10, 50, 12),
+                        FormatType.UPPERCASE_TEXT, TextAlignment.LEFT, "$.user.name"))
+        );
+
+        String invalidPayload = "{ \"taxpayer\": { \"firstName\": \"Jane\" } }"; // missing SSN
+        File outputFile = tempDir.resolve("should_not_exist.pdf").toFile();
+
+        com.taxapp.validation.ValidationException ex = assertThrows(
+                com.taxapp.validation.ValidationException.class,
+                () -> fillerService.generateFilledPdf(blankPdfStream, invalidSpec, invalidPayload, outputFile)
+        );
+
+        assertNotNull(ex.getValidationResult());
+        assertTrue(ex.getValidationResult().hasErrors());
+        assertFalse(outputFile.exists(), "Output file must not be created when validation fails");
     }
 }
 
