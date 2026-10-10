@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 560" width="100%" height="100%" style="background-color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#64748b" />
+    </marker>
+    <marker id="blue-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb" />
+    </marker>
+    <marker id="orange-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#ea580c" />
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Title -->
+  <text x="530" y="32" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a" letter-spacing="0.3">High-Level Architecture (2-Phase Lifecycle)</text>
+
+  <!-- ==================== PHASE 1 CONTAINER ==================== -->
+  <rect x="25" y="55" width="560" height="150" rx="14" fill="#fefce8" fill-opacity="0.4" stroke="#eab308" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <rect x="40" y="44" width="280" height="22" rx="6" fill="#fef08a" stroke="#ca8a04" stroke-width="1"/>
+  <text x="50" y="59" font-size="11.5" font-weight="700" fill="#854d0e">PHASE 1: Annual Setup (Golden Copy Spec)</text>
+
+  <!-- Phase 1 Step A: Authoring Annotation -->
+  <g filter="url(#shadow)">
+    <rect x="45" y="85" width="215" height="95" rx="10" fill="#ffffff" stroke="#eab308" stroke-width="2"/>
+    <!-- Pencil / Ruler Icon -->
+    <g transform="translate(58, 112)">
+      <rect x="2" y="2" width="30" height="30" rx="6" fill="#fef08a"/>
+      <path d="M7 21 L18 10 L23 15 L12 26 L6 27 Z" fill="#ca8a04"/>
+      <line x1="16" y1="12" x2="21" y2="17" stroke="#ffffff" stroke-width="1.5"/>
+    </g>
+    <text x="100" y="115" font-size="14" font-weight="700" fill="#713f12">Form Annotation</text>
+    <text x="100" y="133" font-size="12" font-weight="500" fill="#854d0e">One-time per year</text>
+    <text x="100" y="150" font-size="11" font-weight="500" fill="#a16207">Map bounds &amp; formats</text>
+  </g>
+
+  <!-- Arrow between Phase 1A -> 1B -->
+  <path d="M 260 132 L 305 132" fill="none" stroke="#ca8a04" stroke-width="2.5" marker-end="url(#arrow)" stroke-linecap="round"/>
+
+  <!-- Phase 1 Step B: form1040_2025_spec.json (Golden Copy) -->
+  <g filter="url(#shadow)">
+    <rect x="315" y="85" width="250" height="95" rx="10" fill="#fffbeb" stroke="#b45309" stroke-width="2.5"/>
+    <!-- Star / Golden Badge Icon -->
+    <g transform="translate(328, 112)">
+      <rect x="2" y="2" width="30" height="30" rx="6" fill="#fde68a"/>
+      <polygon points="17,7 20,13 27,14 22,19 23,26 17,22 11,26 12,19 7,14 14,13" fill="#d97706"/>
+    </g>
+    <text x="370" y="112" font-size="13" font-weight="800" fill="#92400e">GOLDEN COPY SPEC</text>
+    <text x="370" y="130" font-size="13.5" font-weight="700" fill="#78350f">form1040_2025_spec.json</text>
+    <text x="370" y="148" font-size="11.5" font-weight="600" fill="#b45309">"The Map" (coordinates &amp; rules)</text>
+  </g>
+
+
+  <!-- ==================== PHASE 2 CONTAINER ==================== -->
+  <rect x="25" y="225" width="560" height="150" rx="14" fill="#fff7ed" fill-opacity="0.4" stroke="#f97316" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <rect x="40" y="214" width="280" height="22" rx="6" fill="#ffedd5" stroke="#ea580c" stroke-width="1"/>
+  <text x="50" y="229" font-size="11.5" font-weight="700" fill="#9a3412">PHASE 2: Runtime Filing (User Data Ingestion)</text>
+
+  <!-- Phase 2 Step A: User Uploads -->
+  <g filter="url(#shadow)">
+    <rect x="45" y="255" width="215" height="95" rx="10" fill="#ffffff" stroke="#f97316" stroke-width="2"/>
+    <!-- Upload Cloud Icon -->
+    <g transform="translate(58, 282)">
+      <rect x="2" y="2" width="30" height="30" rx="6" fill="#fed7aa"/>
+      <path d="M10 20 C8 20 6 18 6 16 C6 14 7.5 12 10 12 C10.5 9.5 13 8 16 8 C19 8 21.5 9.5 22 12 C24.5 12 26 14 26 16 C26 18 24 20 22 20 Z" fill="#ea580c"/>
+      <path d="M16 23 L16 14 M12 17 L16 13 L20 17" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <text x="100" y="285" font-size="14" font-weight="700" fill="#7c2d12">User Uploads</text>
+    <text x="100" y="303" font-size="12" font-weight="500" fill="#9a3412">W-2s, 1099s, Questionnaire</text>
+    <text x="100" y="320" font-size="11" font-weight="500" fill="#c2410c">Raw taxpayer tax info</text>
+  </g>
+
+  <!-- Arrow between Phase 2A -> 2B -->
+  <path d="M 260 302 L 305 302" fill="none" stroke="#ea580c" stroke-width="2.5" marker-end="url(#arrow)" stroke-linecap="round"/>
+
+  <!-- Phase 2 Step B: payer_data.json -->
+  <g filter="url(#shadow)">
+    <rect x="315" y="255" width="250" height="95" rx="10" fill="#fff7ed" stroke="#c2410c" stroke-width="2.5"/>
+    <!-- User/Data Icon -->
+    <g transform="translate(328, 282)">
+      <rect x="2" y="2" width="30" height="30" rx="6" fill="#ffedd5"/>
+      <circle cx="17" cy="13" r="4.5" fill="none" stroke="#ea580c" stroke-width="2"/>
+      <path d="M 9 26 C 9 21, 25 21, 25 26" fill="none" stroke="#ea580c" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <text x="370" y="282" font-size="13" font-weight="800" fill="#9a3412">DYNAMIC PAYLOAD</text>
+    <text x="370" y="300" font-size="13.5" font-weight="700" fill="#7c2d12">payer_data.json</text>
+    <text x="370" y="318" font-size="11.5" font-weight="600" fill="#c2410c">"The Values" (taxpayer inputs)</text>
+  </g>
+
+
+  <!-- ==================== TEMPLATE BOX: Blank IRS 1040 PDF ==================== -->
+  <g filter="url(#shadow)">
+    <rect x="315" y="395" width="250" height="95" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="2.5"/>
+    <!-- PDF Document Icon -->
+    <g transform="translate(328, 422)">
+      <rect x="2" y="2" width="30" height="30" rx="6" fill="#bfdbfe"/>
+      <path d="M8 7 L20 7 L25 12 L25 25 L8 25 Z" fill="#2563eb"/>
+      <line x1="11" y1="13" x2="19" y2="13" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="11" y1="17" x2="22" y2="17" stroke="#ffffff" stroke-width="1.5"/>
+      <line x1="11" y1="21" x2="17" y2="21" stroke="#ffffff" stroke-width="1.5"/>
+    </g>
+    <text x="370" y="422" font-size="13" font-weight="800" fill="#1d4ed8">BLANK TEMPLATE</text>
+    <text x="370" y="440" font-size="13.5" font-weight="700" fill="#1e3a8a">f1040_blank.pdf</text>
+    <text x="370" y="458" font-size="11.5" font-weight="600" fill="#1d4ed8">Official 2-page IRS Canvas</text>
+  </g>
+
+
+  <!-- ==================== CONVERGENCE ARROWS INTO RENDERER ==================== -->
+  <!-- From form1040_2025_spec.json to Renderer -->
+  <path d="M 565 132 C 630 132, 630 270, 680 270" fill="none" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)" stroke-linecap="round"/>
+
+  <!-- From payer_data.json to Renderer -->
+  <path d="M 565 302 L 680 302" fill="none" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)" stroke-linecap="round"/>
+
+  <!-- From f1040_blank.pdf to Renderer -->
+  <path d="M 565 442 C 630 442, 630 334, 680 334" fill="none" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)" stroke-linecap="round"/>
+
+
+  <!-- ==================== RENDERER BOX (Center-Right) ==================== -->
+  <g filter="url(#shadow)">
+    <rect x="690" y="250" width="165" height="104" rx="12" fill="#f0f9ff" stroke="#0284c7" stroke-width="2.5"/>
+    <!-- Gear Icon -->
+    <g transform="translate(705, 275)">
+      <circle cx="16" cy="16" r="8" fill="#bae6fd" stroke="#0284c7" stroke-width="2.5"/>
+      <path d="M 16 3 L 16 7 M 16 25 L 16 29 M 3 16 L 7 16 M 25 16 L 29 16 M 7 7 L 10 10 M 22 22 L 25 25 M 7 25 L 10 22 M 22 10 L 25 7" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="16" cy="16" r="3" fill="#0369a1"/>
+    </g>
+    <!-- Text -->
+    <text x="746" y="292" font-size="17" font-weight="800" fill="#0c4a6e">Renderer</text>
+    <text x="706" y="318" font-size="11" font-weight="600" fill="#0284c7">Form1040FillerService</text>
+    <text x="706" y="333" font-size="10.5" font-weight="500" fill="#0369a1">• JSONPath Query</text>
+    <text x="706" y="346" font-size="10.5" font-weight="500" fill="#0369a1">• Stamp &amp; Flatten</text>
+  </g>
+
+
+  <!-- ==================== OUTPUT ARROW ==================== -->
+  <path d="M 855 302 L 895 302" fill="none" stroke="#16a34a" stroke-width="3" marker-end="url(#arrow)" stroke-linecap="round"/>
+
+
+  <!-- ==================== OUTPUT BOX: Filled 1040 (Far Right) ==================== -->
+  <g filter="url(#shadow)">
+    <rect x="905" y="250" width="135" height="104" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2.5"/>
+    <!-- Checkmark Badge -->
+    <g transform="translate(953, 268)">
+      <rect x="0" y="0" width="38" height="38" rx="8" fill="#22c55e"/>
+      <path d="M10 20 L16 26 L28 12" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="972" y="325" text-anchor="middle" font-size="15" font-weight="800" fill="#14532d">Filled 1040</text>
+    <text x="972" y="342" text-anchor="middle" font-size="10.5" font-weight="600" fill="#15803d">100% Flattened</text>
+  </g>
+</svg>

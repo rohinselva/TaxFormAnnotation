@@ -76,6 +76,8 @@ The generated PDF is **100% flattened**, print-ready, and compliant with IRS vis
 TaxFormAnnotation/
 ├── pom.xml                                   # Maven project dependencies and build configuration
 ├── README.md                                 # Project documentation
+├── SPECIFICATION.md                          # Formal Tax Form Annotation Specification (TFAS-1.0)
+├── ARCHITECTURE.md                           # Architecture and deep-dive technical flow guide
 ├── .gitignore                                # Ignores build artifacts and generated PDFs
 └── src/
     ├── main/

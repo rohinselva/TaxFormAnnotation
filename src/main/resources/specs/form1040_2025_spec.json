@@ -9,10 +9,85 @@
   },
   "fields": [
     {
+      "fieldId": "tax_year_beginning_date",
+      "irsLineNumber": "Header",
+      "page": 1,
+      "position": {
+        "x": 355.0,
+        "y": 742.0,
+        "width": 65.0,
+        "height": 10.0
+      },
+      "format": "DATE_MMDDYYYY",
+      "alignment": "LEFT",
+      "dataPath": "$.header.fiscalYearBeginningDate"
+    },
+    {
+      "fieldId": "tax_year_ending_date",
+      "irsLineNumber": "Header",
+      "page": 1,
+      "position": {
+        "x": 480.0,
+        "y": 742.0,
+        "width": 65.0,
+        "height": 10.0
+      },
+      "format": "DATE_MMDDYYYY",
+      "alignment": "LEFT",
+      "dataPath": "$.header.fiscalYearEndingDate"
+    },
+    {
+      "fieldId": "header_special_status_301_9100_2",
+      "irsLineNumber": "Header",
+      "page": 1,
+      "position": {
+        "x": 130.0,
+        "y": 754.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.header.specialStatus301_9100_2"
+    },
+    {
+      "fieldId": "header_special_status_combat_zone",
+      "irsLineNumber": "Header",
+      "page": 1,
+      "position": {
+        "x": 195.0,
+        "y": 754.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.header.specialStatusCombatZone"
+    },
+    {
+      "fieldId": "header_special_status_other",
+      "irsLineNumber": "Header",
+      "page": 1,
+      "position": {
+        "x": 245.0,
+        "y": 754.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.header.specialStatusOther"
+    },
+    {
       "fieldId": "taxpayer_first_name_mi",
       "irsLineNumber": "Header",
       "page": 1,
-      "position": { "x": 36.0, "y": 684.0, "width": 215.25, "height": 14.0 },
+      "position": {
+        "x": 36.0,
+        "y": 684.0,
+        "width": 215.25,
+        "height": 14.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.taxpayer.firstNameAndInitial"
@@ -21,7 +96,12 @@
       "fieldId": "taxpayer_last_name",
       "irsLineNumber": "Header",
       "page": 1,
-      "position": { "x": 253.0, "y": 684.0, "width": 214.25, "height": 14.0 },
+      "position": {
+        "x": 253.0,
+        "y": 684.0,
+        "width": 214.25,
+        "height": 14.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.taxpayer.lastName"
@@ -30,16 +110,40 @@
       "fieldId": "taxpayer_ssn",
       "irsLineNumber": "Header",
       "page": 1,
-      "position": { "x": 469.0, "y": 684.0, "width": 107.0, "height": 14.0 },
+      "position": {
+        "x": 469.0,
+        "y": 684.0,
+        "width": 107.0,
+        "height": 14.0
+      },
       "format": "SSN_COMBED",
       "alignment": "LEFT",
       "dataPath": "$.taxpayer.ssn"
     },
     {
+      "fieldId": "taxpayer_date_of_death",
+      "irsLineNumber": "Header",
+      "page": 1,
+      "position": {
+        "x": 469.0,
+        "y": 708.0,
+        "width": 107.0,
+        "height": 12.0
+      },
+      "format": "DATE_MMDDYYYY",
+      "alignment": "LEFT",
+      "dataPath": "$.taxpayer.dateOfDeath"
+    },
+    {
       "fieldId": "spouse_first_name_mi",
       "irsLineNumber": "Header",
       "page": 1,
-      "position": { "x": 36.0, "y": 660.0, "width": 215.25, "height": 14.0 },
+      "position": {
+        "x": 36.0,
+        "y": 660.0,
+        "width": 215.25,
+        "height": 14.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.spouse.firstNameAndInitial"
@@ -48,7 +152,12 @@
       "fieldId": "spouse_last_name",
       "irsLineNumber": "Header",
       "page": 1,
-      "position": { "x": 253.0, "y": 660.0, "width": 214.25, "height": 14.0 },
+      "position": {
+        "x": 253.0,
+        "y": 660.0,
+        "width": 214.25,
+        "height": 14.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.spouse.lastName"
@@ -57,16 +166,40 @@
       "fieldId": "spouse_ssn",
       "irsLineNumber": "Header",
       "page": 1,
-      "position": { "x": 469.0, "y": 660.0, "width": 107.0, "height": 14.0 },
+      "position": {
+        "x": 469.0,
+        "y": 660.0,
+        "width": 107.0,
+        "height": 14.0
+      },
       "format": "SSN_COMBED",
       "alignment": "LEFT",
       "dataPath": "$.spouse.ssn"
     },
     {
+      "fieldId": "spouse_date_of_death",
+      "irsLineNumber": "Header",
+      "page": 1,
+      "position": {
+        "x": 469.0,
+        "y": 648.0,
+        "width": 107.0,
+        "height": 12.0
+      },
+      "format": "DATE_MMDDYYYY",
+      "alignment": "LEFT",
+      "dataPath": "$.spouse.dateOfDeath"
+    },
+    {
       "fieldId": "home_address_street",
       "irsLineNumber": "Header",
       "page": 1,
-      "position": { "x": 36.0, "y": 636.0, "width": 380.85, "height": 14.0 },
+      "position": {
+        "x": 36.0,
+        "y": 636.0,
+        "width": 380.85,
+        "height": 14.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.taxpayer.address.street"
@@ -75,7 +208,12 @@
       "fieldId": "home_address_apt",
       "irsLineNumber": "Header",
       "page": 1,
-      "position": { "x": 418.6, "y": 636.0, "width": 48.65, "height": 14.0 },
+      "position": {
+        "x": 418.6,
+        "y": 636.0,
+        "width": 48.65,
+        "height": 14.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.taxpayer.address.aptNo"
@@ -84,7 +222,12 @@
       "fieldId": "home_address_city",
       "irsLineNumber": "Header",
       "page": 1,
-      "position": { "x": 36.0, "y": 612.0, "width": 294.45, "height": 14.0 },
+      "position": {
+        "x": 36.0,
+        "y": 612.0,
+        "width": 294.45,
+        "height": 14.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.taxpayer.address.city"
@@ -93,7 +236,12 @@
       "fieldId": "home_address_state",
       "irsLineNumber": "Header",
       "page": 1,
-      "position": { "x": 332.2, "y": 612.0, "width": 63.05, "height": 14.0 },
+      "position": {
+        "x": 332.2,
+        "y": 612.0,
+        "width": 63.05,
+        "height": 14.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.taxpayer.address.state"
@@ -102,16 +250,82 @@
       "fieldId": "home_address_zip",
       "irsLineNumber": "Header",
       "page": 1,
-      "position": { "x": 397.0, "y": 612.0, "width": 70.25, "height": 14.0 },
+      "position": {
+        "x": 397.0,
+        "y": 612.0,
+        "width": 70.25,
+        "height": 14.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.taxpayer.address.zipCode"
     },
     {
+      "fieldId": "header_residency_main_home_us",
+      "irsLineNumber": "Header",
+      "page": 1,
+      "position": {
+        "x": 485.0,
+        "y": 624.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.taxpayer.mainHomeInUsMoreThanHalfYear"
+    },
+    {
+      "fieldId": "foreign_country_name",
+      "irsLineNumber": "Header",
+      "page": 1,
+      "position": {
+        "x": 36.0,
+        "y": 598.0,
+        "width": 200.0,
+        "height": 12.0
+      },
+      "format": "UPPERCASE_TEXT",
+      "alignment": "LEFT",
+      "dataPath": "$.taxpayer.address.foreignCountry"
+    },
+    {
+      "fieldId": "foreign_province_state",
+      "irsLineNumber": "Header",
+      "page": 1,
+      "position": {
+        "x": 242.0,
+        "y": 598.0,
+        "width": 180.0,
+        "height": 12.0
+      },
+      "format": "UPPERCASE_TEXT",
+      "alignment": "LEFT",
+      "dataPath": "$.taxpayer.address.foreignProvince"
+    },
+    {
+      "fieldId": "foreign_postal_code",
+      "irsLineNumber": "Header",
+      "page": 1,
+      "position": {
+        "x": 428.0,
+        "y": 598.0,
+        "width": 100.0,
+        "height": 12.0
+      },
+      "format": "UPPERCASE_TEXT",
+      "alignment": "LEFT",
+      "dataPath": "$.taxpayer.address.foreignPostalCode"
+    },
+    {
       "fieldId": "filing_status_single",
       "irsLineNumber": "Filing Status",
       "page": 1,
-      "position": { "x": 97.6, "y": 578.0, "width": 8.0, "height": 8.0 },
+      "position": {
+        "x": 97.6,
+        "y": 578.0,
+        "width": 8.0,
+        "height": 8.0
+      },
       "format": "CHECKBOX_BOOLEAN",
       "alignment": "CENTER",
       "dataPath": "$.filingStatus.isSingle"
@@ -120,7 +334,12 @@
       "fieldId": "filing_status_mfj",
       "irsLineNumber": "Filing Status",
       "page": 1,
-      "position": { "x": 97.6, "y": 566.0, "width": 8.0, "height": 8.0 },
+      "position": {
+        "x": 97.6,
+        "y": 566.0,
+        "width": 8.0,
+        "height": 8.0
+      },
       "format": "CHECKBOX_BOOLEAN",
       "alignment": "CENTER",
       "dataPath": "$.filingStatus.isMarriedFilingJointly"
@@ -129,7 +348,12 @@
       "fieldId": "filing_status_mfs",
       "irsLineNumber": "Filing Status",
       "page": 1,
-      "position": { "x": 97.6, "y": 554.0, "width": 8.0, "height": 8.0 },
+      "position": {
+        "x": 97.6,
+        "y": 554.0,
+        "width": 8.0,
+        "height": 8.0
+      },
       "format": "CHECKBOX_BOOLEAN",
       "alignment": "CENTER",
       "dataPath": "$.filingStatus.isMarriedFilingSeparately"
@@ -138,7 +362,12 @@
       "fieldId": "filing_status_hoh",
       "irsLineNumber": "Filing Status",
       "page": 1,
-      "position": { "x": 349.6, "y": 578.0, "width": 8.0, "height": 8.0 },
+      "position": {
+        "x": 349.6,
+        "y": 578.0,
+        "width": 8.0,
+        "height": 8.0
+      },
       "format": "CHECKBOX_BOOLEAN",
       "alignment": "CENTER",
       "dataPath": "$.filingStatus.isHeadOfHousehold"
@@ -147,16 +376,82 @@
       "fieldId": "filing_status_qss",
       "irsLineNumber": "Filing Status",
       "page": 1,
-      "position": { "x": 349.6, "y": 566.0, "width": 8.0, "height": 8.0 },
+      "position": {
+        "x": 349.6,
+        "y": 566.0,
+        "width": 8.0,
+        "height": 8.0
+      },
       "format": "CHECKBOX_BOOLEAN",
       "alignment": "CENTER",
       "dataPath": "$.filingStatus.isQualifyingSurvivingSpouse"
     },
     {
+      "fieldId": "filing_status_mfs_spouse_name",
+      "irsLineNumber": "Filing Status",
+      "page": 1,
+      "position": {
+        "x": 245.0,
+        "y": 554.0,
+        "width": 330.0,
+        "height": 12.0
+      },
+      "format": "UPPERCASE_TEXT",
+      "alignment": "LEFT",
+      "dataPath": "$.filingStatus.mfsSpouseName"
+    },
+    {
+      "fieldId": "filing_status_qualifying_person_name",
+      "irsLineNumber": "Filing Status",
+      "page": 1,
+      "position": {
+        "x": 245.0,
+        "y": 542.0,
+        "width": 330.0,
+        "height": 12.0
+      },
+      "format": "UPPERCASE_TEXT",
+      "alignment": "LEFT",
+      "dataPath": "$.filingStatus.qualifyingPersonName"
+    },
+    {
+      "fieldId": "filing_status_nra_spouse_election_checkbox",
+      "irsLineNumber": "Filing Status",
+      "page": 1,
+      "position": {
+        "x": 36.0,
+        "y": 530.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.filingStatus.treatNraSpouseAsResidentElection"
+    },
+    {
+      "fieldId": "filing_status_nra_spouse_name",
+      "irsLineNumber": "Filing Status",
+      "page": 1,
+      "position": {
+        "x": 350.0,
+        "y": 530.0,
+        "width": 220.0,
+        "height": 12.0
+      },
+      "format": "UPPERCASE_TEXT",
+      "alignment": "LEFT",
+      "dataPath": "$.filingStatus.treatNraSpouseAsResidentSpouseName"
+    },
+    {
       "fieldId": "digital_assets_yes",
       "irsLineNumber": "Digital Assets",
       "page": 1,
-      "position": { "x": 518.4, "y": 497.0, "width": 8.0, "height": 8.0 },
+      "position": {
+        "x": 518.4,
+        "y": 497.0,
+        "width": 8.0,
+        "height": 8.0
+      },
       "format": "CHECKBOX_BOOLEAN",
       "alignment": "CENTER",
       "dataPath": "$.digitalAssets.answeredYes"
@@ -165,7 +460,12 @@
       "fieldId": "digital_assets_no",
       "irsLineNumber": "Digital Assets",
       "page": 1,
-      "position": { "x": 554.4, "y": 497.0, "width": 8.0, "height": 8.0 },
+      "position": {
+        "x": 554.4,
+        "y": 497.0,
+        "width": 8.0,
+        "height": 8.0
+      },
       "format": "CHECKBOX_BOOLEAN",
       "alignment": "CENTER",
       "dataPath": "$.digitalAssets.answeredNo"
@@ -174,7 +474,12 @@
       "fieldId": "dep1_first_name",
       "irsLineNumber": "Dependents",
       "page": 1,
-      "position": { "x": 145.0, "y": 471.0, "width": 106.25, "height": 12.0 },
+      "position": {
+        "x": 145.0,
+        "y": 471.0,
+        "width": 106.0,
+        "height": 11.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.dependents[0].firstName"
@@ -183,7 +488,12 @@
       "fieldId": "dep1_last_name",
       "irsLineNumber": "Dependents",
       "page": 1,
-      "position": { "x": 145.0, "y": 459.0, "width": 106.25, "height": 12.0 },
+      "position": {
+        "x": 145.0,
+        "y": 459.0,
+        "width": 106.0,
+        "height": 11.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.dependents[0].lastName"
@@ -192,7 +502,12 @@
       "fieldId": "dep1_ssn",
       "irsLineNumber": "Dependents",
       "page": 1,
-      "position": { "x": 145.0, "y": 447.0, "width": 106.25, "height": 12.0 },
+      "position": {
+        "x": 145.0,
+        "y": 447.0,
+        "width": 106.0,
+        "height": 11.0
+      },
       "format": "SSN_COMBED",
       "alignment": "LEFT",
       "dataPath": "$.dependents[0].ssn"
@@ -201,16 +516,110 @@
       "fieldId": "dep1_relationship",
       "irsLineNumber": "Dependents",
       "page": 1,
-      "position": { "x": 145.0, "y": 435.0, "width": 106.25, "height": 12.0 },
+      "position": {
+        "x": 145.0,
+        "y": 435.0,
+        "width": 106.0,
+        "height": 11.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.dependents[0].relationship"
     },
     {
+      "fieldId": "dep1_lived_with_you_more_than_half_year",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 163.0,
+        "y": 418.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[0].livedWithYouMoreThanHalfYear"
+    },
+    {
+      "fieldId": "dep1_lived_in_us",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 163.0,
+        "y": 405.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[0].livedInUs"
+    },
+    {
+      "fieldId": "dep1_full_time_student",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 150.0,
+        "y": 388.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[0].isFullTimeStudent"
+    },
+    {
+      "fieldId": "dep1_permanently_disabled",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 201.0,
+        "y": 388.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[0].isPermanentlyDisabled"
+    },
+    {
+      "fieldId": "dep1_child_tax_credit",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 150.0,
+        "y": 370.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[0].qualifiesChildTaxCredit"
+    },
+    {
+      "fieldId": "dep1_other_dep_credit",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 201.0,
+        "y": 370.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[0].qualifiesCreditOtherDependents"
+    },
+    {
       "fieldId": "dep2_first_name",
       "irsLineNumber": "Dependents",
       "page": 1,
-      "position": { "x": 253.0, "y": 471.0, "width": 106.25, "height": 12.0 },
+      "position": {
+        "x": 253.0,
+        "y": 471.0,
+        "width": 106.0,
+        "height": 11.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.dependents[1].firstName"
@@ -219,7 +628,12 @@
       "fieldId": "dep2_last_name",
       "irsLineNumber": "Dependents",
       "page": 1,
-      "position": { "x": 253.0, "y": 459.0, "width": 106.25, "height": 12.0 },
+      "position": {
+        "x": 253.0,
+        "y": 459.0,
+        "width": 106.0,
+        "height": 11.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.dependents[1].lastName"
@@ -228,7 +642,12 @@
       "fieldId": "dep2_ssn",
       "irsLineNumber": "Dependents",
       "page": 1,
-      "position": { "x": 253.0, "y": 447.0, "width": 106.25, "height": 12.0 },
+      "position": {
+        "x": 253.0,
+        "y": 447.0,
+        "width": 106.0,
+        "height": 11.0
+      },
       "format": "SSN_COMBED",
       "alignment": "LEFT",
       "dataPath": "$.dependents[1].ssn"
@@ -237,16 +656,110 @@
       "fieldId": "dep2_relationship",
       "irsLineNumber": "Dependents",
       "page": 1,
-      "position": { "x": 253.0, "y": 435.0, "width": 106.25, "height": 12.0 },
+      "position": {
+        "x": 253.0,
+        "y": 435.0,
+        "width": 106.0,
+        "height": 11.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.dependents[1].relationship"
     },
     {
+      "fieldId": "dep2_lived_with_you_more_than_half_year",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 271.0,
+        "y": 418.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[1].livedWithYouMoreThanHalfYear"
+    },
+    {
+      "fieldId": "dep2_lived_in_us",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 271.0,
+        "y": 405.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[1].livedInUs"
+    },
+    {
+      "fieldId": "dep2_full_time_student",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 258.0,
+        "y": 388.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[1].isFullTimeStudent"
+    },
+    {
+      "fieldId": "dep2_permanently_disabled",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 309.0,
+        "y": 388.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[1].isPermanentlyDisabled"
+    },
+    {
+      "fieldId": "dep2_child_tax_credit",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 258.0,
+        "y": 370.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[1].qualifiesChildTaxCredit"
+    },
+    {
+      "fieldId": "dep2_other_dep_credit",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 309.0,
+        "y": 370.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[1].qualifiesCreditOtherDependents"
+    },
+    {
       "fieldId": "dep3_first_name",
       "irsLineNumber": "Dependents",
       "page": 1,
-      "position": { "x": 361.0, "y": 471.0, "width": 106.25, "height": 12.0 },
+      "position": {
+        "x": 361.0,
+        "y": 471.0,
+        "width": 106.0,
+        "height": 11.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.dependents[2].firstName"
@@ -255,7 +768,12 @@
       "fieldId": "dep3_last_name",
       "irsLineNumber": "Dependents",
       "page": 1,
-      "position": { "x": 361.0, "y": 459.0, "width": 106.25, "height": 12.0 },
+      "position": {
+        "x": 361.0,
+        "y": 459.0,
+        "width": 106.0,
+        "height": 11.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.dependents[2].lastName"
@@ -264,7 +782,12 @@
       "fieldId": "dep3_ssn",
       "irsLineNumber": "Dependents",
       "page": 1,
-      "position": { "x": 361.0, "y": 447.0, "width": 106.25, "height": 12.0 },
+      "position": {
+        "x": 361.0,
+        "y": 447.0,
+        "width": 106.0,
+        "height": 11.0
+      },
       "format": "SSN_COMBED",
       "alignment": "LEFT",
       "dataPath": "$.dependents[2].ssn"
@@ -273,16 +796,110 @@
       "fieldId": "dep3_relationship",
       "irsLineNumber": "Dependents",
       "page": 1,
-      "position": { "x": 361.0, "y": 435.0, "width": 106.25, "height": 12.0 },
+      "position": {
+        "x": 361.0,
+        "y": 435.0,
+        "width": 106.0,
+        "height": 11.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.dependents[2].relationship"
     },
     {
+      "fieldId": "dep3_lived_with_you_more_than_half_year",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 379.0,
+        "y": 418.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[2].livedWithYouMoreThanHalfYear"
+    },
+    {
+      "fieldId": "dep3_lived_in_us",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 379.0,
+        "y": 405.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[2].livedInUs"
+    },
+    {
+      "fieldId": "dep3_full_time_student",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 366.0,
+        "y": 388.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[2].isFullTimeStudent"
+    },
+    {
+      "fieldId": "dep3_permanently_disabled",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 417.0,
+        "y": 388.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[2].isPermanentlyDisabled"
+    },
+    {
+      "fieldId": "dep3_child_tax_credit",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 366.0,
+        "y": 370.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[2].qualifiesChildTaxCredit"
+    },
+    {
+      "fieldId": "dep3_other_dep_credit",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 417.0,
+        "y": 370.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[2].qualifiesCreditOtherDependents"
+    },
+    {
       "fieldId": "dep4_first_name",
       "irsLineNumber": "Dependents",
       "page": 1,
-      "position": { "x": 469.0, "y": 471.0, "width": 107.0, "height": 12.0 },
+      "position": {
+        "x": 469.0,
+        "y": 471.0,
+        "width": 106.0,
+        "height": 11.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.dependents[3].firstName"
@@ -291,7 +908,12 @@
       "fieldId": "dep4_last_name",
       "irsLineNumber": "Dependents",
       "page": 1,
-      "position": { "x": 469.0, "y": 459.0, "width": 107.0, "height": 12.0 },
+      "position": {
+        "x": 469.0,
+        "y": 459.0,
+        "width": 106.0,
+        "height": 11.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.dependents[3].lastName"
@@ -300,7 +922,12 @@
       "fieldId": "dep4_ssn",
       "irsLineNumber": "Dependents",
       "page": 1,
-      "position": { "x": 469.0, "y": 447.0, "width": 107.0, "height": 12.0 },
+      "position": {
+        "x": 469.0,
+        "y": 447.0,
+        "width": 106.0,
+        "height": 11.0
+      },
       "format": "SSN_COMBED",
       "alignment": "LEFT",
       "dataPath": "$.dependents[3].ssn"
@@ -309,16 +936,138 @@
       "fieldId": "dep4_relationship",
       "irsLineNumber": "Dependents",
       "page": 1,
-      "position": { "x": 469.0, "y": 435.0, "width": 107.0, "height": 12.0 },
+      "position": {
+        "x": 469.0,
+        "y": 435.0,
+        "width": 106.0,
+        "height": 11.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.dependents[3].relationship"
     },
     {
+      "fieldId": "dep4_lived_with_you_more_than_half_year",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 487.0,
+        "y": 418.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[3].livedWithYouMoreThanHalfYear"
+    },
+    {
+      "fieldId": "dep4_lived_in_us",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 487.0,
+        "y": 405.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[3].livedInUs"
+    },
+    {
+      "fieldId": "dep4_full_time_student",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 474.0,
+        "y": 388.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[3].isFullTimeStudent"
+    },
+    {
+      "fieldId": "dep4_permanently_disabled",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 525.0,
+        "y": 388.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[3].isPermanentlyDisabled"
+    },
+    {
+      "fieldId": "dep4_child_tax_credit",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 474.0,
+        "y": 370.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[3].qualifiesChildTaxCredit"
+    },
+    {
+      "fieldId": "dep4_other_dep_credit",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 525.0,
+        "y": 370.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[3].qualifiesCreditOtherDependents"
+    },
+    {
+      "fieldId": "more_than_four_dependents",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 93.0,
+        "y": 400.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependentsOverview.moreThanFourDependents"
+    },
+    {
+      "fieldId": "mfs_hoh_lived_apart_last_6_months",
+      "irsLineNumber": "Filing Status",
+      "page": 1,
+      "position": {
+        "x": 485.0,
+        "y": 350.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.filingStatus.livedApartFromSpouseLast6Months"
+    },
+    {
       "fieldId": "line_1a_w2_wages",
       "irsLineNumber": "1a",
       "page": 1,
-      "position": { "x": 504.0, "y": 330.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 330.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.income.w2Wages"
@@ -327,7 +1076,12 @@
       "fieldId": "line_1b_household_employee_wages",
       "irsLineNumber": "1b",
       "page": 1,
-      "position": { "x": 504.0, "y": 318.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 318.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_EXACT",
       "alignment": "RIGHT",
       "dataPath": "$.income.householdEmployeeWages"
@@ -336,7 +1090,12 @@
       "fieldId": "line_1c_unreported_tips",
       "irsLineNumber": "1c",
       "page": 1,
-      "position": { "x": 504.0, "y": 306.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 306.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.income.unreportedTips"
@@ -345,7 +1104,12 @@
       "fieldId": "line_1d_medicaid_waiver_payments",
       "irsLineNumber": "1d",
       "page": 1,
-      "position": { "x": 504.0, "y": 294.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 294.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.income.medicaidWaiverPayments"
@@ -354,7 +1118,12 @@
       "fieldId": "line_1e_dependent_care_benefits",
       "irsLineNumber": "1e",
       "page": 1,
-      "position": { "x": 504.0, "y": 282.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 282.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.income.dependentCareBenefits"
@@ -363,7 +1132,12 @@
       "fieldId": "line_1f_employer_adoption_benefits",
       "irsLineNumber": "1f",
       "page": 1,
-      "position": { "x": 504.0, "y": 270.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 270.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.income.adoptionBenefits"
@@ -372,16 +1146,40 @@
       "fieldId": "line_1g_form_8919_wages",
       "irsLineNumber": "1g",
       "page": 1,
-      "position": { "x": 504.0, "y": 258.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 258.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.income.form8919Wages"
     },
     {
+      "fieldId": "line_1h_other_earned_income_type",
+      "irsLineNumber": "1h",
+      "page": 1,
+      "position": {
+        "x": 230.0,
+        "y": 246.0,
+        "width": 260.0,
+        "height": 12.0
+      },
+      "format": "UPPERCASE_TEXT",
+      "alignment": "LEFT",
+      "dataPath": "$.income.otherEarnedIncomeType"
+    },
+    {
       "fieldId": "line_1h_other_earned_income_amount",
       "irsLineNumber": "1h",
       "page": 1,
-      "position": { "x": 504.0, "y": 246.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 246.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.income.otherEarnedIncomeAmount"
@@ -390,7 +1188,12 @@
       "fieldId": "line_1z_total_earned_income",
       "irsLineNumber": "1z",
       "page": 1,
-      "position": { "x": 504.0, "y": 222.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 222.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.income.totalEarnedIncome1z"
@@ -399,7 +1202,12 @@
       "fieldId": "line_2b_taxable_interest",
       "irsLineNumber": "2b",
       "page": 1,
-      "position": { "x": 504.0, "y": 210.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 210.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.income.taxableInterest"
@@ -408,52 +1216,236 @@
       "fieldId": "line_3b_ordinary_dividends",
       "irsLineNumber": "3b",
       "page": 1,
-      "position": { "x": 504.0, "y": 198.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 198.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.income.ordinaryDividends"
     },
     {
+      "fieldId": "line_3c_child_dividends_in_3a_checkbox",
+      "irsLineNumber": "3c",
+      "page": 1,
+      "position": {
+        "x": 430.0,
+        "y": 186.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.income.childDividendsIncludedIn3a"
+    },
+    {
+      "fieldId": "line_3c_child_dividends_in_3b_checkbox",
+      "irsLineNumber": "3c",
+      "page": 1,
+      "position": {
+        "x": 470.0,
+        "y": 186.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.income.childDividendsIncludedIn3b"
+    },
+    {
       "fieldId": "line_4b_ira_taxable_amount",
       "irsLineNumber": "4b",
       "page": 1,
-      "position": { "x": 504.0, "y": 174.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 174.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.income.iraTaxableAmount"
     },
     {
+      "fieldId": "line_4c_ira_rollover_checkbox",
+      "irsLineNumber": "4c",
+      "page": 1,
+      "position": {
+        "x": 440.0,
+        "y": 174.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.income.iraRollover"
+    },
+    {
+      "fieldId": "line_4c_ira_qcd_checkbox",
+      "irsLineNumber": "4c",
+      "page": 1,
+      "position": {
+        "x": 462.0,
+        "y": 174.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.income.iraQcd"
+    },
+    {
+      "fieldId": "line_4c_ira_other_checkbox",
+      "irsLineNumber": "4c",
+      "page": 1,
+      "position": {
+        "x": 485.0,
+        "y": 174.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.income.iraOther"
+    },
+    {
       "fieldId": "line_5b_pensions_taxable_amount",
       "irsLineNumber": "5b",
       "page": 1,
-      "position": { "x": 504.0, "y": 150.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 150.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.income.pensionsTaxableAmount"
     },
     {
+      "fieldId": "line_5c_pension_rollover_checkbox",
+      "irsLineNumber": "5c",
+      "page": 1,
+      "position": {
+        "x": 440.0,
+        "y": 150.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.income.pensionRollover"
+    },
+    {
+      "fieldId": "line_5c_pension_pso_checkbox",
+      "irsLineNumber": "5c",
+      "page": 1,
+      "position": {
+        "x": 462.0,
+        "y": 150.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.income.pensionPso"
+    },
+    {
+      "fieldId": "line_5c_pension_other_checkbox",
+      "irsLineNumber": "5c",
+      "page": 1,
+      "position": {
+        "x": 485.0,
+        "y": 150.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.income.pensionOther"
+    },
+    {
       "fieldId": "line_6b_taxable_social_security",
       "irsLineNumber": "6b",
       "page": 1,
-      "position": { "x": 504.0, "y": 126.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 126.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.income.taxableSocialSecurity"
     },
     {
+      "fieldId": "line_6d_mfs_lived_apart_social_security",
+      "irsLineNumber": "6d",
+      "page": 1,
+      "position": {
+        "x": 485.0,
+        "y": 114.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.income.mfsLivedApartAllYearSocialSecurity"
+    },
+    {
       "fieldId": "line_7_capital_gain",
       "irsLineNumber": "7",
       "page": 1,
-      "position": { "x": 504.0, "y": 90.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 90.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.income.capitalGain"
     },
     {
+      "fieldId": "line_7b_schedule_d_not_required_checkbox",
+      "irsLineNumber": "7b",
+      "page": 1,
+      "position": {
+        "x": 445.0,
+        "y": 90.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.income.scheduleDNotRequired"
+    },
+    {
+      "fieldId": "line_7b_includes_child_capital_gain_checkbox",
+      "irsLineNumber": "7b",
+      "page": 1,
+      "position": {
+        "x": 480.0,
+        "y": 90.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.income.includesChildCapitalGainOrLoss"
+    },
+    {
       "fieldId": "line_9_total_income",
       "irsLineNumber": "9",
       "page": 1,
-      "position": { "x": 504.0, "y": 66.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 66.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.income.totalIncome"
@@ -462,25 +1454,194 @@
       "fieldId": "line_11a_agi",
       "irsLineNumber": "11a",
       "page": 1,
-      "position": { "x": 504.0, "y": 42.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 42.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.tax.adjustedGrossIncome"
+    },
+    {
+      "fieldId": "page2_taxpayer_name",
+      "irsLineNumber": "Header",
+      "page": 2,
+      "position": {
+        "x": 36.0,
+        "y": 760.0,
+        "width": 250.0,
+        "height": 12.0
+      },
+      "format": "UPPERCASE_TEXT",
+      "alignment": "LEFT",
+      "dataPath": "$.taxpayer.firstNameAndInitial"
+    },
+    {
+      "fieldId": "page2_taxpayer_ssn",
+      "irsLineNumber": "Header",
+      "page": 2,
+      "position": {
+        "x": 469.0,
+        "y": 760.0,
+        "width": 107.0,
+        "height": 12.0
+      },
+      "format": "SSN_COMBED",
+      "alignment": "LEFT",
+      "dataPath": "$.taxpayer.ssn"
     },
     {
       "fieldId": "line_11b_agi_page2",
       "irsLineNumber": "11b",
       "page": 2,
-      "position": { "x": 504.0, "y": 744.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 744.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.tax.adjustedGrossIncome"
     },
     {
+      "fieldId": "std_deduction_taxpayer_dependent",
+      "irsLineNumber": "12a",
+      "page": 2,
+      "position": {
+        "x": 175.0,
+        "y": 728.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.standardDeduction.someoneCanClaimYouAsDependent"
+    },
+    {
+      "fieldId": "std_deduction_spouse_dependent",
+      "irsLineNumber": "12a",
+      "page": 2,
+      "position": {
+        "x": 285.0,
+        "y": 728.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.standardDeduction.someoneCanClaimSpouseAsDependent"
+    },
+    {
+      "fieldId": "std_deduction_spouse_itemizes",
+      "irsLineNumber": "12b",
+      "page": 2,
+      "position": {
+        "x": 215.0,
+        "y": 716.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.standardDeduction.spouseItemizesSeparateReturn"
+    },
+    {
+      "fieldId": "std_deduction_dual_status_alien",
+      "irsLineNumber": "12c",
+      "page": 2,
+      "position": {
+        "x": 215.0,
+        "y": 704.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.standardDeduction.dualStatusAlien"
+    },
+    {
+      "fieldId": "std_deduction_taxpayer_age",
+      "irsLineNumber": "12d",
+      "page": 2,
+      "position": {
+        "x": 180.0,
+        "y": 694.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.standardDeduction.taxpayerBornBefore1961"
+    },
+    {
+      "fieldId": "std_deduction_taxpayer_blind",
+      "irsLineNumber": "12d",
+      "page": 2,
+      "position": {
+        "x": 255.0,
+        "y": 694.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.standardDeduction.taxpayerBlind"
+    },
+    {
+      "fieldId": "std_deduction_spouse_age",
+      "irsLineNumber": "12d",
+      "page": 2,
+      "position": {
+        "x": 355.0,
+        "y": 694.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.standardDeduction.spouseBornBefore1961"
+    },
+    {
+      "fieldId": "std_deduction_spouse_blind",
+      "irsLineNumber": "12d",
+      "page": 2,
+      "position": {
+        "x": 430.0,
+        "y": 694.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.standardDeduction.spouseBlind"
+    },
+    {
+      "fieldId": "line_12_standard_or_itemized_deduction",
+      "irsLineNumber": "12",
+      "page": 2,
+      "position": {
+        "x": 504.0,
+        "y": 684.0,
+        "width": 72.0,
+        "height": 12.0
+      },
+      "format": "CURRENCY_ROUNDED",
+      "alignment": "RIGHT",
+      "dataPath": "$.tax.standardOrItemizedDeduction"
+    },
+    {
       "fieldId": "line_12e_standard_or_itemized_deduction",
       "irsLineNumber": "12e",
       "page": 2,
-      "position": { "x": 504.0, "y": 684.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 684.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.tax.standardOrItemizedDeduction"
@@ -489,7 +1650,12 @@
       "fieldId": "line_13a_qbi_deduction",
       "irsLineNumber": "13a",
       "page": 2,
-      "position": { "x": 504.0, "y": 672.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 672.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.tax.qbiDeduction"
@@ -498,7 +1664,12 @@
       "fieldId": "line_13b_additional_deductions",
       "irsLineNumber": "13b",
       "page": 2,
-      "position": { "x": 504.0, "y": 660.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 660.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.tax.additionalDeductions"
@@ -507,7 +1678,12 @@
       "fieldId": "line_14_total_deductions",
       "irsLineNumber": "14",
       "page": 2,
-      "position": { "x": 504.0, "y": 648.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 648.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.tax.totalDeductions"
@@ -516,7 +1692,12 @@
       "fieldId": "line_15_taxable_income",
       "irsLineNumber": "15",
       "page": 2,
-      "position": { "x": 504.0, "y": 636.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 636.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.tax.taxableIncome"
@@ -525,16 +1706,82 @@
       "fieldId": "line_16_tax",
       "irsLineNumber": "16",
       "page": 2,
-      "position": { "x": 504.0, "y": 624.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 624.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.tax.tentativeTax"
     },
     {
+      "fieldId": "line_16_form_8814_checkbox",
+      "irsLineNumber": "16",
+      "page": 2,
+      "position": {
+        "x": 380.0,
+        "y": 624.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.tax.form8814Checked"
+    },
+    {
+      "fieldId": "line_16_form_4972_checkbox",
+      "irsLineNumber": "16",
+      "page": 2,
+      "position": {
+        "x": 420.0,
+        "y": 624.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.tax.form4972Checked"
+    },
+    {
+      "fieldId": "line_16_other_form_checkbox",
+      "irsLineNumber": "16",
+      "page": 2,
+      "position": {
+        "x": 455.0,
+        "y": 624.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.tax.otherTaxFormChecked"
+    },
+    {
+      "fieldId": "line_16_other_form_name",
+      "irsLineNumber": "16",
+      "page": 2,
+      "position": {
+        "x": 468.0,
+        "y": 624.0,
+        "width": 32.0,
+        "height": 10.0
+      },
+      "format": "UPPERCASE_TEXT",
+      "alignment": "LEFT",
+      "dataPath": "$.tax.otherTaxFormName"
+    },
+    {
       "fieldId": "line_17_schedule_2_line_3",
       "irsLineNumber": "17",
       "page": 2,
-      "position": { "x": 504.0, "y": 612.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 612.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.tax.schedule2Line3"
@@ -543,7 +1790,12 @@
       "fieldId": "line_18_total_tax_before_credits",
       "irsLineNumber": "18",
       "page": 2,
-      "position": { "x": 504.0, "y": 600.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 600.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.tax.totalTaxBeforeCredits"
@@ -552,7 +1804,12 @@
       "fieldId": "line_24_total_tax",
       "irsLineNumber": "24",
       "page": 2,
-      "position": { "x": 504.0, "y": 528.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 528.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.tax.totalTax"
@@ -561,7 +1818,12 @@
       "fieldId": "line_25a_w2_withholding",
       "irsLineNumber": "25a",
       "page": 2,
-      "position": { "x": 410.4, "y": 504.0, "width": 71.25, "height": 12.0 },
+      "position": {
+        "x": 410.4,
+        "y": 504.0,
+        "width": 71.25,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.payments.w2Withholding"
@@ -570,7 +1832,12 @@
       "fieldId": "line_25d_total_withholding",
       "irsLineNumber": "25d",
       "page": 2,
-      "position": { "x": 504.0, "y": 468.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 468.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.payments.totalWithholding"
@@ -579,7 +1846,12 @@
       "fieldId": "line_26_former_spouse_ssn",
       "irsLineNumber": "26",
       "page": 2,
-      "position": { "x": 236.0, "y": 432.0, "width": 75.0, "height": 12.0 },
+      "position": {
+        "x": 236.0,
+        "y": 432.0,
+        "width": 75.0,
+        "height": 12.0
+      },
       "format": "SSN_MASKED",
       "alignment": "LEFT",
       "dataPath": "$.payments.formerSpouseSsn"
@@ -588,7 +1860,12 @@
       "fieldId": "line_33_total_payments",
       "irsLineNumber": "33",
       "page": 2,
-      "position": { "x": 504.0, "y": 324.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 324.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.payments.totalPayments"
@@ -597,7 +1874,12 @@
       "fieldId": "line_34_overpayment",
       "irsLineNumber": "34",
       "page": 2,
-      "position": { "x": 504.0, "y": 312.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 312.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.refund.overpaidAmount"
@@ -606,16 +1888,40 @@
       "fieldId": "line_35a_refund_amount",
       "irsLineNumber": "35a",
       "page": 2,
-      "position": { "x": 504.0, "y": 300.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 300.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.refund.overpaidAmount"
     },
     {
+      "fieldId": "line_35a_form_8888_attached",
+      "irsLineNumber": "35a",
+      "page": 2,
+      "position": {
+        "x": 380.0,
+        "y": 300.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.refund.form8888Attached"
+    },
+    {
       "fieldId": "line_37_amount_you_owe",
       "irsLineNumber": "37",
       "page": 2,
-      "position": { "x": 504.0, "y": 228.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 228.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "CURRENCY_ROUNDED",
       "alignment": "RIGHT",
       "dataPath": "$.balance.amountYouOwe"
@@ -624,7 +1930,12 @@
       "fieldId": "taxpayer_occupation",
       "irsLineNumber": "Sign Here",
       "page": 2,
-      "position": { "x": 325.0, "y": 126.0, "width": 135.05, "height": 16.0 },
+      "position": {
+        "x": 325.0,
+        "y": 126.0,
+        "width": 135.05,
+        "height": 16.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.taxpayer.occupation"
@@ -633,7 +1944,12 @@
       "fieldId": "taxpayer_pin",
       "irsLineNumber": "Sign Here",
       "page": 2,
-      "position": { "x": 504.0, "y": 126.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 126.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.taxpayer.identityProtectionPin"
@@ -642,7 +1958,12 @@
       "fieldId": "spouse_occupation",
       "irsLineNumber": "Sign Here",
       "page": 2,
-      "position": { "x": 325.0, "y": 96.0, "width": 135.05, "height": 16.0 },
+      "position": {
+        "x": 325.0,
+        "y": 96.0,
+        "width": 135.05,
+        "height": 16.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.spouse.occupation"
@@ -651,7 +1972,12 @@
       "fieldId": "spouse_pin",
       "irsLineNumber": "Sign Here",
       "page": 2,
-      "position": { "x": 504.0, "y": 96.0, "width": 72.0, "height": 12.0 },
+      "position": {
+        "x": 504.0,
+        "y": 96.0,
+        "width": 72.0,
+        "height": 12.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.spouse.identityProtectionPin"
@@ -660,19 +1986,953 @@
       "fieldId": "daytime_phone",
       "irsLineNumber": "Sign Here",
       "page": 2,
-      "position": { "x": 127.6, "y": 84.0, "width": 145.25, "height": 12.0 },
+      "position": {
+        "x": 127.6,
+        "y": 84.0,
+        "width": 145.25,
+        "height": 12.0
+      },
       "format": "UPPERCASE_TEXT",
       "alignment": "LEFT",
       "dataPath": "$.taxpayer.phone"
     },
     {
+      "fieldId": "taxpayer_email",
+      "irsLineNumber": "Sign Here",
+      "page": 2,
+      "position": {
+        "x": 325.0,
+        "y": 84.0,
+        "width": 245.0,
+        "height": 12.0
+      },
+      "format": "UPPERCASE_TEXT",
+      "alignment": "LEFT",
+      "dataPath": "$.taxpayer.email"
+    },
+    {
       "fieldId": "taxpayer_sign_date",
       "irsLineNumber": "Sign Here",
       "page": 2,
-      "position": { "x": 278.0, "y": 126.0, "width": 45.0, "height": 16.0 },
+      "position": {
+        "x": 278.0,
+        "y": 126.0,
+        "width": 45.0,
+        "height": 16.0
+      },
       "format": "DATE_MMDDYYYY",
       "alignment": "LEFT",
       "dataPath": "$.taxpayer.signatureDate"
+    },
+    {
+      "fieldId": "spouse_sign_date",
+      "irsLineNumber": "Sign Here",
+      "page": 2,
+      "position": {
+        "x": 278.0,
+        "y": 96.0,
+        "width": 45.0,
+        "height": 16.0
+      },
+      "format": "DATE_MMDDYYYY",
+      "alignment": "LEFT",
+      "dataPath": "$.spouse.signatureDate"
+    },
+    {
+      "fieldId": "presidential_election_you",
+      "irsLineNumber": "Header",
+      "page": 1,
+      "position": {
+        "x": 532.0,
+        "y": 636.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.header.presidentialElectionYou"
+    },
+    {
+      "fieldId": "presidential_election_spouse",
+      "irsLineNumber": "Header",
+      "page": 1,
+      "position": {
+        "x": 568.0,
+        "y": 636.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.header.presidentialElectionSpouse"
+    },
+    {
+      "fieldId": "std_deduction_taxpayer_age",
+      "irsLineNumber": "Standard Deduction",
+      "page": 1,
+      "position": {
+        "x": 165.0,
+        "y": 512.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.standardDeduction.taxpayerBornBefore1961"
+    },
+    {
+      "fieldId": "std_deduction_taxpayer_blind",
+      "irsLineNumber": "Standard Deduction",
+      "page": 1,
+      "position": {
+        "x": 215.0,
+        "y": 512.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.standardDeduction.taxpayerBlind"
+    },
+    {
+      "fieldId": "std_deduction_spouse_age",
+      "irsLineNumber": "Standard Deduction",
+      "page": 1,
+      "position": {
+        "x": 295.0,
+        "y": 512.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.standardDeduction.spouseBornBefore1961"
+    },
+    {
+      "fieldId": "std_deduction_spouse_blind",
+      "irsLineNumber": "Standard Deduction",
+      "page": 1,
+      "position": {
+        "x": 345.0,
+        "y": 512.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.standardDeduction.spouseBlind"
+    },
+    {
+      "fieldId": "std_deduction_taxpayer_dependent",
+      "irsLineNumber": "Standard Deduction",
+      "page": 1,
+      "position": {
+        "x": 450.0,
+        "y": 512.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.standardDeduction.someoneCanClaimYouAsDependent"
+    },
+    {
+      "fieldId": "std_deduction_spouse_dependent",
+      "irsLineNumber": "Standard Deduction",
+      "page": 1,
+      "position": {
+        "x": 515.0,
+        "y": 512.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.standardDeduction.someoneCanClaimSpouseAsDependent"
+    },
+    {
+      "fieldId": "std_deduction_spouse_itemizes",
+      "irsLineNumber": "Standard Deduction",
+      "page": 1,
+      "position": {
+        "x": 560.0,
+        "y": 512.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.standardDeduction.spouseItemizesSeparateOrDualStatus"
+    },
+    {
+      "fieldId": "dep1_child_tax_credit",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 210.0,
+        "y": 422.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[0].qualifiesChildTaxCredit"
+    },
+    {
+      "fieldId": "dep1_other_dep_credit",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 236.0,
+        "y": 422.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[0].qualifiesCreditOtherDependents"
+    },
+    {
+      "fieldId": "dep2_child_tax_credit",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 318.0,
+        "y": 422.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[1].qualifiesChildTaxCredit"
+    },
+    {
+      "fieldId": "dep2_other_dep_credit",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 344.0,
+        "y": 422.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[1].qualifiesCreditOtherDependents"
+    },
+    {
+      "fieldId": "dep3_child_tax_credit",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 426.0,
+        "y": 422.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[2].qualifiesChildTaxCredit"
+    },
+    {
+      "fieldId": "dep3_other_dep_credit",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 452.0,
+        "y": 422.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[2].qualifiesCreditOtherDependents"
+    },
+    {
+      "fieldId": "dep4_child_tax_credit",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 534.0,
+        "y": 422.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[3].qualifiesChildTaxCredit"
+    },
+    {
+      "fieldId": "dep4_other_dep_credit",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 560.0,
+        "y": 422.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependents[3].qualifiesCreditOtherDependents"
+    },
+    {
+      "fieldId": "more_than_four_dependents",
+      "irsLineNumber": "Dependents",
+      "page": 1,
+      "position": {
+        "x": 36.0,
+        "y": 422.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.dependentsOverview.moreThanFourDependents"
+    },
+    {
+      "fieldId": "line_1i_nontaxable_combat_pay",
+      "irsLineNumber": "1i",
+      "page": 1,
+      "position": {
+        "x": 410.4,
+        "y": 234.0,
+        "width": 71.25,
+        "height": 12.0
+      },
+      "format": "CURRENCY_ROUNDED",
+      "alignment": "RIGHT",
+      "dataPath": "$.income.nontaxableCombatPay"
+    },
+    {
+      "fieldId": "line_2a_tax_exempt_interest",
+      "irsLineNumber": "2a",
+      "page": 1,
+      "position": {
+        "x": 410.4,
+        "y": 210.0,
+        "width": 71.25,
+        "height": 12.0
+      },
+      "format": "CURRENCY_ROUNDED",
+      "alignment": "RIGHT",
+      "dataPath": "$.income.taxExemptInterest"
+    },
+    {
+      "fieldId": "line_3a_qualified_dividends",
+      "irsLineNumber": "3a",
+      "page": 1,
+      "position": {
+        "x": 410.4,
+        "y": 198.0,
+        "width": 71.25,
+        "height": 12.0
+      },
+      "format": "CURRENCY_ROUNDED",
+      "alignment": "RIGHT",
+      "dataPath": "$.income.qualifiedDividends"
+    },
+    {
+      "fieldId": "line_4a_ira_distributions_total",
+      "irsLineNumber": "4a",
+      "page": 1,
+      "position": {
+        "x": 410.4,
+        "y": 174.0,
+        "width": 71.25,
+        "height": 12.0
+      },
+      "format": "CURRENCY_ROUNDED",
+      "alignment": "RIGHT",
+      "dataPath": "$.income.iraTotalDistributions"
+    },
+    {
+      "fieldId": "line_5a_pensions_total",
+      "irsLineNumber": "5a",
+      "page": 1,
+      "position": {
+        "x": 410.4,
+        "y": 150.0,
+        "width": 71.25,
+        "height": 12.0
+      },
+      "format": "CURRENCY_ROUNDED",
+      "alignment": "RIGHT",
+      "dataPath": "$.income.pensionsTotalAmount"
+    },
+    {
+      "fieldId": "line_6a_social_security_total",
+      "irsLineNumber": "6a",
+      "page": 1,
+      "position": {
+        "x": 410.4,
+        "y": 126.0,
+        "width": 71.25,
+        "height": 12.0
+      },
+      "format": "CURRENCY_ROUNDED",
+      "alignment": "RIGHT",
+      "dataPath": "$.income.socialSecurityTotalBenefits"
+    },
+    {
+      "fieldId": "line_6c_lump_sum_election",
+      "irsLineNumber": "6c",
+      "page": 1,
+      "position": {
+        "x": 485.0,
+        "y": 126.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.income.lumpSumElectionMethodUsed"
+    },
+    {
+      "fieldId": "line_7_form_8949_required",
+      "irsLineNumber": "7",
+      "page": 1,
+      "position": {
+        "x": 485.0,
+        "y": 90.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.income.form8949Required"
+    },
+    {
+      "fieldId": "line_8_schedule_1_income",
+      "irsLineNumber": "8",
+      "page": 1,
+      "position": {
+        "x": 504.0,
+        "y": 78.0,
+        "width": 72.0,
+        "height": 12.0
+      },
+      "format": "CURRENCY_ROUNDED",
+      "alignment": "RIGHT",
+      "dataPath": "$.income.schedule1Line10Income"
+    },
+    {
+      "fieldId": "line_10_adjustments_to_income",
+      "irsLineNumber": "10",
+      "page": 1,
+      "position": {
+        "x": 504.0,
+        "y": 54.0,
+        "width": 72.0,
+        "height": 12.0
+      },
+      "format": "CURRENCY_ROUNDED",
+      "alignment": "RIGHT",
+      "dataPath": "$.income.schedule1Line26Adjustments"
+    },
+    {
+      "fieldId": "line_19_child_tax_credit",
+      "irsLineNumber": "19",
+      "page": 2,
+      "position": {
+        "x": 504.0,
+        "y": 588.0,
+        "width": 72.0,
+        "height": 12.0
+      },
+      "format": "CURRENCY_ROUNDED",
+      "alignment": "RIGHT",
+      "dataPath": "$.tax.childTaxCreditSchedule8812"
+    },
+    {
+      "fieldId": "line_20_schedule_3_line_8",
+      "irsLineNumber": "20",
+      "page": 2,
+      "position": {
+        "x": 504.0,
+        "y": 576.0,
+        "width": 72.0,
+        "height": 12.0
+      },
+      "format": "CURRENCY_ROUNDED",
+      "alignment": "RIGHT",
+      "dataPath": "$.tax.schedule3Line8Credits"
+    },
+    {
+      "fieldId": "line_21_total_credits",
+      "irsLineNumber": "21",
+      "page": 2,
+      "position": {
+        "x": 504.0,
+        "y": 564.0,
+        "width": 72.0,
+        "height": 12.0
+      },
+      "format": "CURRENCY_ROUNDED",
+      "alignment": "RIGHT",
+      "dataPath": "$.tax.totalCreditsLine21"
+    },
+    {
+      "fieldId": "line_22_tax_after_credits",
+      "irsLineNumber": "22",
+      "page": 2,
+      "position": {
+        "x": 504.0,
+        "y": 552.0,
+        "width": 72.0,
+        "height": 12.0
+      },
+      "format": "CURRENCY_ROUNDED",
+      "alignment": "RIGHT",
+      "dataPath": "$.tax.taxAfterCreditsLine22"
+    },
+    {
+      "fieldId": "line_23_other_taxes_schedule_2",
+      "irsLineNumber": "23",
+      "page": 2,
+      "position": {
+        "x": 504.0,
+        "y": 540.0,
+        "width": 72.0,
+        "height": 12.0
+      },
+      "format": "CURRENCY_ROUNDED",
+      "alignment": "RIGHT",
+      "dataPath": "$.tax.otherTaxesSchedule2Line21"
+    },
+    {
+      "fieldId": "line_25b_1099_withholding",
+      "irsLineNumber": "25b",
+      "page": 2,
+      "position": {
+        "x": 410.4,
+        "y": 492.0,
+        "width": 71.25,
+        "height": 12.0
+      },
+      "format": "CURRENCY_ROUNDED",
+      "alignment": "RIGHT",
+      "dataPath": "$.payments.withholding1099"
+    },
+    {
+      "fieldId": "line_25c_other_withholding",
+      "irsLineNumber": "25c",
+      "page": 2,
+      "position": {
+        "x": 410.4,
+        "y": 480.0,
+        "width": 71.25,
+        "height": 12.0
+      },
+      "format": "CURRENCY_ROUNDED",
+      "alignment": "RIGHT",
+      "dataPath": "$.payments.withholdingOtherForms"
+    },
+    {
+      "fieldId": "line_26_estimated_tax_payments",
+      "irsLineNumber": "26",
+      "page": 2,
+      "position": {
+        "x": 504.0,
+        "y": 432.0,
+        "width": 72.0,
+        "height": 12.0
+      },
+      "format": "CURRENCY_ROUNDED",
+      "alignment": "RIGHT",
+      "dataPath": "$.payments.estimatedTaxPayments"
+    },
+    {
+      "fieldId": "line_27_earned_income_credit",
+      "irsLineNumber": "27",
+      "page": 2,
+      "position": {
+        "x": 504.0,
+        "y": 420.0,
+        "width": 72.0,
+        "height": 12.0
+      },
+      "format": "CURRENCY_ROUNDED",
+      "alignment": "RIGHT",
+      "dataPath": "$.payments.earnedIncomeCreditEIC"
+    },
+    {
+      "fieldId": "line_27b_clergy_schedule_se",
+      "irsLineNumber": "27b",
+      "page": 2,
+      "position": {
+        "x": 485.0,
+        "y": 420.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.payments.clergyFilingScheduleSe"
+    },
+    {
+      "fieldId": "line_27c_elect_not_to_claim_eic",
+      "irsLineNumber": "27c",
+      "page": 2,
+      "position": {
+        "x": 460.0,
+        "y": 420.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.payments.electNotToClaimEic"
+    },
+    {
+      "fieldId": "line_28_additional_child_tax_credit",
+      "irsLineNumber": "28",
+      "page": 2,
+      "position": {
+        "x": 504.0,
+        "y": 408.0,
+        "width": 72.0,
+        "height": 12.0
+      },
+      "format": "CURRENCY_ROUNDED",
+      "alignment": "RIGHT",
+      "dataPath": "$.payments.additionalChildTaxCredit"
+    },
+    {
+      "fieldId": "line_28_elect_not_to_claim_actc",
+      "irsLineNumber": "28",
+      "page": 2,
+      "position": {
+        "x": 485.0,
+        "y": 408.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.payments.electNotToClaimActc"
+    },
+    {
+      "fieldId": "line_29_american_opportunity_credit",
+      "irsLineNumber": "29",
+      "page": 2,
+      "position": {
+        "x": 504.0,
+        "y": 396.0,
+        "width": 72.0,
+        "height": 12.0
+      },
+      "format": "CURRENCY_ROUNDED",
+      "alignment": "RIGHT",
+      "dataPath": "$.payments.americanOpportunityCredit"
+    },
+    {
+      "fieldId": "line_30_refundable_adoption_credit",
+      "irsLineNumber": "30",
+      "page": 2,
+      "position": {
+        "x": 504.0,
+        "y": 384.0,
+        "width": 72.0,
+        "height": 12.0
+      },
+      "format": "CURRENCY_ROUNDED",
+      "alignment": "RIGHT",
+      "dataPath": "$.payments.refundableAdoptionCredit"
+    },
+    {
+      "fieldId": "line_31_schedule_3_line_15",
+      "irsLineNumber": "31",
+      "page": 2,
+      "position": {
+        "x": 504.0,
+        "y": 372.0,
+        "width": 72.0,
+        "height": 12.0
+      },
+      "format": "CURRENCY_ROUNDED",
+      "alignment": "RIGHT",
+      "dataPath": "$.payments.schedule3Line15RefundableCredits"
+    },
+    {
+      "fieldId": "line_32_total_other_payments",
+      "irsLineNumber": "32",
+      "page": 2,
+      "position": {
+        "x": 504.0,
+        "y": 348.0,
+        "width": 72.0,
+        "height": 12.0
+      },
+      "format": "CURRENCY_ROUNDED",
+      "alignment": "RIGHT",
+      "dataPath": "$.payments.totalOtherPayments"
+    },
+    {
+      "fieldId": "line_35b_routing_number",
+      "irsLineNumber": "35b",
+      "page": 2,
+      "position": {
+        "x": 127.6,
+        "y": 286.0,
+        "width": 110.0,
+        "height": 12.0
+      },
+      "format": "UPPERCASE_TEXT",
+      "alignment": "LEFT",
+      "dataPath": "$.refund.routingNumber"
+    },
+    {
+      "fieldId": "line_35c_type_checking",
+      "irsLineNumber": "35c",
+      "page": 2,
+      "position": {
+        "x": 295.0,
+        "y": 286.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.refund.isCheckingAccount"
+    },
+    {
+      "fieldId": "line_35c_type_savings",
+      "irsLineNumber": "35c",
+      "page": 2,
+      "position": {
+        "x": 345.0,
+        "y": 286.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.refund.isSavingsAccount"
+    },
+    {
+      "fieldId": "line_35d_account_number",
+      "irsLineNumber": "35d",
+      "page": 2,
+      "position": {
+        "x": 410.0,
+        "y": 286.0,
+        "width": 160.0,
+        "height": 12.0
+      },
+      "format": "UPPERCASE_TEXT",
+      "alignment": "LEFT",
+      "dataPath": "$.refund.accountNumber"
+    },
+    {
+      "fieldId": "line_36_applied_to_estimated_tax",
+      "irsLineNumber": "36",
+      "page": 2,
+      "position": {
+        "x": 504.0,
+        "y": 270.0,
+        "width": 72.0,
+        "height": 12.0
+      },
+      "format": "CURRENCY_ROUNDED",
+      "alignment": "RIGHT",
+      "dataPath": "$.refund.appliedToNextYearEstimatedTax"
+    },
+    {
+      "fieldId": "line_38_estimated_tax_penalty",
+      "irsLineNumber": "38",
+      "page": 2,
+      "position": {
+        "x": 504.0,
+        "y": 204.0,
+        "width": 72.0,
+        "height": 12.0
+      },
+      "format": "CURRENCY_ROUNDED",
+      "alignment": "RIGHT",
+      "dataPath": "$.balance.estimatedTaxPenalty"
+    },
+    {
+      "fieldId": "third_party_designee_yes",
+      "irsLineNumber": "Third Party Designee",
+      "page": 2,
+      "position": {
+        "x": 436.0,
+        "y": 198.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.thirdPartyDesignee.allowDiscussionYes"
+    },
+    {
+      "fieldId": "third_party_designee_no",
+      "irsLineNumber": "Third Party Designee",
+      "page": 2,
+      "position": {
+        "x": 550.0,
+        "y": 198.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.thirdPartyDesignee.allowDiscussionNo"
+    },
+    {
+      "fieldId": "third_party_designee_name",
+      "irsLineNumber": "Third Party Designee",
+      "page": 2,
+      "position": {
+        "x": 95.0,
+        "y": 184.0,
+        "width": 175.0,
+        "height": 12.0
+      },
+      "format": "UPPERCASE_TEXT",
+      "alignment": "LEFT",
+      "dataPath": "$.thirdPartyDesignee.name"
+    },
+    {
+      "fieldId": "third_party_designee_phone",
+      "irsLineNumber": "Third Party Designee",
+      "page": 2,
+      "position": {
+        "x": 305.0,
+        "y": 184.0,
+        "width": 115.0,
+        "height": 12.0
+      },
+      "format": "UPPERCASE_TEXT",
+      "alignment": "LEFT",
+      "dataPath": "$.thirdPartyDesignee.phone"
+    },
+    {
+      "fieldId": "third_party_designee_pin",
+      "irsLineNumber": "Third Party Designee",
+      "page": 2,
+      "position": {
+        "x": 475.0,
+        "y": 184.0,
+        "width": 95.0,
+        "height": 12.0
+      },
+      "format": "UPPERCASE_TEXT",
+      "alignment": "LEFT",
+      "dataPath": "$.thirdPartyDesignee.personalIdentificationNumber"
+    },
+    {
+      "fieldId": "preparer_name",
+      "irsLineNumber": "Paid Preparer",
+      "page": 2,
+      "position": {
+        "x": 108.0,
+        "y": 62.0,
+        "width": 220.0,
+        "height": 12.0
+      },
+      "format": "UPPERCASE_TEXT",
+      "alignment": "LEFT",
+      "dataPath": "$.paidPreparer.name"
+    },
+    {
+      "fieldId": "preparer_sign_date",
+      "irsLineNumber": "Paid Preparer",
+      "page": 2,
+      "position": {
+        "x": 400.0,
+        "y": 62.0,
+        "width": 50.0,
+        "height": 12.0
+      },
+      "format": "DATE_MMDDYYYY",
+      "alignment": "LEFT",
+      "dataPath": "$.paidPreparer.signatureDate"
+    },
+    {
+      "fieldId": "preparer_ptin",
+      "irsLineNumber": "Paid Preparer",
+      "page": 2,
+      "position": {
+        "x": 462.0,
+        "y": 62.0,
+        "width": 50.0,
+        "height": 12.0
+      },
+      "format": "UPPERCASE_TEXT",
+      "alignment": "LEFT",
+      "dataPath": "$.paidPreparer.ptin"
+    },
+    {
+      "fieldId": "preparer_self_employed",
+      "irsLineNumber": "Paid Preparer",
+      "page": 2,
+      "position": {
+        "x": 524.0,
+        "y": 62.0,
+        "width": 8.0,
+        "height": 8.0
+      },
+      "format": "CHECKBOX_BOOLEAN",
+      "alignment": "CENTER",
+      "dataPath": "$.paidPreparer.isSelfEmployed"
+    },
+    {
+      "fieldId": "preparer_firm_name",
+      "irsLineNumber": "Paid Preparer",
+      "page": 2,
+      "position": {
+        "x": 135.0,
+        "y": 48.0,
+        "width": 220.0,
+        "height": 12.0
+      },
+      "format": "UPPERCASE_TEXT",
+      "alignment": "LEFT",
+      "dataPath": "$.paidPreparer.firmName"
+    },
+    {
+      "fieldId": "preparer_phone",
+      "irsLineNumber": "Paid Preparer",
+      "page": 2,
+      "position": {
+        "x": 485.0,
+        "y": 48.0,
+        "width": 90.0,
+        "height": 12.0
+      },
+      "format": "UPPERCASE_TEXT",
+      "alignment": "LEFT",
+      "dataPath": "$.paidPreparer.phone"
+    },
+    {
+      "fieldId": "preparer_firm_address",
+      "irsLineNumber": "Paid Preparer",
+      "page": 2,
+      "position": {
+        "x": 140.0,
+        "y": 34.0,
+        "width": 220.0,
+        "height": 12.0
+      },
+      "format": "UPPERCASE_TEXT",
+      "alignment": "LEFT",
+      "dataPath": "$.paidPreparer.firmAddress"
+    },
+    {
+      "fieldId": "preparer_firm_ein",
+      "irsLineNumber": "Paid Preparer",
+      "page": 2,
+      "position": {
+        "x": 485.0,
+        "y": 34.0,
+        "width": 90.0,
+        "height": 12.0
+      },
+      "format": "UPPERCASE_TEXT",
+      "alignment": "LEFT",
+      "dataPath": "$.paidPreparer.firmEin"
     }
   ]
 }

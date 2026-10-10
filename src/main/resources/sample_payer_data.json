@@ -7,6 +7,7 @@
       "street": "100 CONGRESS AVE",
       "city": "AUSTIN",
       "state": "TX",
+      "aptNo": "SUITE 400",
       "zipCode": "78701"
     },
     "occupation": "SOFTWARE ARCHITECT",
